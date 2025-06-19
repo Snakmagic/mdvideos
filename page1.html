@@ -20,9 +20,40 @@
             display: block;
             margin: 0 auto 20px auto;
         }
+        .pagination {
+            margin: 30px 0;
+        }
+        .pagination a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 12px;
+            background-color: #333;
+            border-radius: 4px;
+        }
+        .pagination a:hover {
+            background-color: #555;
+        }
+        .pagination .current {
+            background-color: #666;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
+    <div class="pagination">
+        <span class="current">1</span>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html">7</a>
+        <a href="page8.html">8</a>
+        <a href="page9.html">9</a>
+        <a href="page10.html">10</a>
+    </div>
+
     <h2>Midjourney generated image</h2>
     <img src="mjstill_crash.png">
     
@@ -30,5 +61,18 @@
     <video controls autoplay loop muted preload="auto">
         <source src="mjvideo_crash.mp4" type="video/mp4">
     </video>
+
+    <div class="pagination">
+        <span class="current">1</span>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html">7</a>
+        <a href="page8.html">8</a>
+        <a href="page9.html">9</a>
+        <a href="page10.html">10</a>
+    </div>
 </body>
 </html>
