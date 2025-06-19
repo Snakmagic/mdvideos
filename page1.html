@@ -26,17 +26,20 @@
         .pagination a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-            padding: 8px 12px;
+            margin: 0 20px;
+            padding: 8px 16px;
             background-color: #333;
             border-radius: 4px;
         }
         .pagination a:hover {
             background-color: #555;
         }
-        .pagination .current {
-            background-color: #666;
-            color: #ccc;
+        .pagination .disabled {
+            color: #666;
+            background-color: #222;
+            margin: 0 20px;
+            padding: 8px 16px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -50,16 +53,8 @@
     </video>
 
     <div class="pagination">
-        <span class="current">1</span>
-        <a href="page2.html">2</a>
-        <a href="page3.html">3</a>
-        <a href="page4.html">4</a>
-        <a href="page5.html">5</a>
-        <a href="page6.html">6</a>
-        <a href="page7.html">7</a>
-        <a href="page8.html">8</a>
-        <a href="page9.html">9</a>
-        <a href="page10.html">10</a>
+        <span class="disabled">Previous</span>
+        <a href="page2.html">Next</a>
     </div>
 </body>
 </html>
