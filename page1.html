@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image + Video</title>
+    <title>AI Generated Content</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        img, video {
+            max-width: 600px;
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <img src="mjstill_crash.png" style="max-width: 100%; display: block;">
-    <video controls autoplay loop muted preload="auto" style="max-width: 100%; margin-top: 20px;">
-    <source src="mjvideo_crash.mp4" type="video/mp4">
-</video>
+    <h2>Midjourney generated image</h2>
+    <img src="mjstill_crash.png">
+    
+    <h2>Midjourney generated video from above image</h2>
+    <video controls autoplay loop muted preload="auto">
+        <source src="mjvideo_crash.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
