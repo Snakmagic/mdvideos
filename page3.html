@@ -1,60 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Midjourney still to video test</title>
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 40px 20px 20px 20px;
-            text-align: center;
-        }
-        h2 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        img, video {
-            max-width: 600px;
-            width: 100%;
-            display: block;
-            margin: 0 auto 20px auto;
-        }
-        .pagination {
-            margin: 30px 0;
-        }
-        .pagination a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            padding: 8px 16px;
-            background-color: #333;
-            border-radius: 4px;
-        }
-        .pagination a:hover {
-            background-color: #555;
-        }
-        .pagination .disabled {
-            color: #666;
-            background-color: #222;
-            margin: 0 20px;
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 40px 20px 20px 20px;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      .side-by-side {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .media-item {
+        flex: 1;
+        max-width: 600px;
+      }
+      .media-item img,
+      .media-item video {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .pagination {
+        margin: 30px 0;
+      }
+      .pagination a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        padding: 8px 16px;
+        background-color: #333;
+        border-radius: 4px;
+      }
+      .pagination a:hover {
+        background-color: #555;
+      }
+      .pagination .disabled {
+        color: #666;
+        background-color: #222;
+        margin: 0 20px;
+        padding: 8px 16px;
+        border-radius: 4px;
+      }
     </style>
-</head>
-<body>
-    <h2>Midjourney generated image</h2>
-    <img src="mjstill_launch.png">
-    
-    <h2>Midjourney generated video from above image</h2>
-    <video controls autoplay loop muted preload="auto">
-        <source src="mjvideo_launch.mp4" type="video/mp4">
-    </video>
+  </head>
+  <body>
+    <div class="side-by-side">
+      <div class="media-item">
+        <h2>Midjourney generated image</h2>
+        <img src="mjstill_launch.png" />
+      </div>
+
+      <div class="media-item">
+        <h2>Midjourney video from image</h2>
+        <video controls autoplay loop muted preload="auto">
+          <source src="mjvideo_launch.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
     <div class="pagination">
-        <a href="page2.html">Previous</a>
-        <a href="page4.html">Next</a>
+      <a href="page2.html">Previous</a>
+      <a href="page4.html">Next</span>
     </div>
-</body>
+  </body>
 </html>
