@@ -14,11 +14,17 @@
         margin-bottom: 10px;
         font-size: 18px;
       }
+      .content {
+        min-height: 550px;
+        display: flex;
+        flex-direction: column;
+      }
       .side-by-side {
         display: flex;
         justify-content: center;
         gap: 20px;
         align-items: flex-start;
+        flex: 1;
       }
       .media-item {
         flex: 1;
@@ -54,23 +60,25 @@
     </style>
   </head>
   <body>
-    <div class="side-by-side">
-      <div class="media-item">
-        <h2>Midjourney generated image</h2>
-        <img src="mjstill_woman_bw2.png" />
-      </div>
+    <div class="content">
+      <div class="side-by-side">
+        <div class="media-item">
+          <h2>Midjourney generated image</h2>
+          <img src="mjstill_woman_bw2.png" />
+        </div>
 
-      <div class="media-item">
-        <h2>Midjourney video from image</h2>
-        <video controls autoplay loop muted preload="auto">
-          <source src="mjvideo_woman_bw2.mp4" type="video/mp4" />
-        </video>
+        <div class="media-item">
+          <h2>Midjourney video from image</h2>
+          <video controls autoplay loop muted preload="auto">
+            <source src="mjvideo_woman_bw2.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
 
     <div class="pagination">
       <a href="page7.html">Previous</a>
-      <a href="page9.html">Next</span>
+      <a href="page9.html">Next</a>
     </div>
   </body>
 </html>
