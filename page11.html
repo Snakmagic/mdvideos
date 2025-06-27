@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Guy's Midjourney still to video test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Inter", Arial, sans-serif;
+        margin: 40px 20px 20px 20px;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      img,
+      video {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        pointer-events: none;
+      }
+
+      .content {
+        min-height: 550px;
+        display: flex;
+        flex-direction: column;
+      }
+      .side-by-side {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: flex-start;
+        flex: 1;
+      }
+      .media-item {
+        flex: 1;
+        max-width: 475px;
+      }
+      .media-item img,
+      .media-item video {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .pagination {
+        margin: 30px 0;
+      }
+      .pagination a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        padding: 8px 16px;
+        background-color: #333;
+        border-radius: 4px;
+      }
+      .pagination a:hover {
+        background-color: #555;
+      }
+      .pagination .disabled {
+        color: #666;
+        background-color: #222;
+        margin: 0 20px;
+        padding: 8px 16px;
+        border-radius: 4px;
+      }
+      .copyright {
+        margin-top: 40px;
+        font-size: 13px;
+        color: #444444;
+      }
+      @media (max-width: 768px) {
+        .side-by-side {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .media-item {
+          max-width: 90%;
+        }
+
+        .content {
+          min-height: auto;
+        }
+
+        .pagination {
+          margin: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="side-by-side">
+        <div class="media-item">
+          <h2>Original photograph</h2>
+          <img src="gsstill_cat.png" />
+        </div>
+
+        <div class="media-item">
+          <h2>Midjourney video from photo</h2>
+          <video
+            loop
+            muted
+            preload="auto"
+            playsinline
+            webkit-playsinline
+            autoplay
+            poster="gsstill_cat.png"
+          >
+            <source src="mjvideo_cat.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <a href="page10.html">Previous</a>
+      <a href="page12.html">Next</a>
+    </div>
+
+    <div class="copyright">All images © 2025 Guy Schackman</div>
+
+    <script>
+      document.addEventListener("keydown", function (e) {
+        // Left arrow - go to previous page
+        if (e.key === "ArrowLeft") {
+          const prevElement = document.querySelector(
+            ".pagination a, .pagination span"
+          );
+          if (
+            prevElement &&
+            prevElement.tagName === "A" &&
+            prevElement.textContent.trim() === "Previous"
+          ) {
+            window.location.href = prevElement.href;
+          }
+        }
+
+        // Right arrow - go to next page
+        if (e.key === "ArrowRight") {
+          const nextElement = document.querySelector(
+            ".pagination a:last-child, .pagination span:last-child"
+          );
+          if (
+            nextElement &&
+            nextElement.tagName === "A" &&
+            nextElement.textContent.trim() === "Next"
+          ) {
+            window.location.href = nextElement.href;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
