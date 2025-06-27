@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Guy's Midjourney still to video test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
         background-color: black;
@@ -94,7 +95,14 @@
 
         <div class="media-item">
           <h2>Midjourney video from image</h2>
-          <video controls autoplay loop muted preload="auto">
+          <video
+            controls
+            loop
+            muted
+            preload="auto"
+            playsinline
+            webkit-playsinline
+          >
             <source src="mjvideo_crash.mp4" type="video/mp4" />
           </video>
         </div>
